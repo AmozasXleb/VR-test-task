@@ -1,0 +1,145 @@
+@font-face
+{
+    font-family: SFPR;
+    src: url('../../assets/SF-Pro-Rounded-Regular.otf') format('opentype');
+}
+
+@font-face
+{
+    font-family: SFPRBold;
+    src: url('../../assets/SF-Pro-Rounded-Semibold.otf') format('opentype');
+}
+
+@font-face
+{
+    font-family: SFPRLight;
+    src: url('../../assets/SF-Pro-Rounded-Light.otf') format('opentype');
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content
+{
+        background: #FCFCFC;
+    width: 400px;
+    height: 860px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main
+{
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.header
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+}
+
+.header h1
+{
+    font-size: 30px;
+    line-height: 39px;
+    letter-spacing: -0.4px;
+    font-family: SFPRBold;
+    margin-bottom: 10px;
+}
+
+.header p
+{
+font-family: SFPRLight;
+font-weight: 300;
+font-size: 15px;
+line-height: 100%;
+letter-spacing: 0.4px;
+color: #656972;
+margin: 0px;
+}
+
+.input-cont
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+    gap: 10px;
+}
+
+.input-cont label
+{
+font-family: SFPRLight;
+font-weight: 400;
+font-size: 13px;
+line-height: 100%;
+letter-spacing: 0.4px;
+color: #999EA7;
+margin-left: 5px;
+}
+
+.input-cont div
+{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #F2F2F5;
+    background: white;
+    border-radius: 12px;
+font-family: SFPR;
+}
+
+.input-cont input
+{
+    width: 100%;
+    border: none;
+    font-size: 16px;
+}
+
+.input-cont input:focus
+{
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+}
+
+.input-cont button
+{
+    border: none;
+    background: none;
+    align-items: center;
+    padding: 0px;
+    display: flex;
+}
+
+.button-cont
+{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+.button-cont p
+{
+    font-family: SFPRLight;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: #656972;
+    font-weight: 200;
+}
+
+.button-cont span
+{
+    font-family: SFPR;
+}

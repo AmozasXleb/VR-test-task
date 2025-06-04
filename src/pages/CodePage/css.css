@@ -1,0 +1,15 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+}
+
+.content
+{
+        background: #FCFCFC;
+    width: 400px;
+    height: 860px;
+box-shadow: 0px 0px 8px 1px rgba(154, 154, 154, 0.378);
+border-radius: 30px;
+}
