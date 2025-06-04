@@ -143,3 +143,20 @@ font-family: SFPR;
 {
     font-family: SFPR;
 }
+
+.next
+{
+    background: #2d2d2d5c;
+        font-size: 16px;
+    line-height: 21.79px;
+    letter-spacing: 0.22px;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font-family: SFPR;
+    height: 56px;
+    width: 100%;
+    font-weight: 500;
+    border-radius: 16px;
+    border: none;
+}

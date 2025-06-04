@@ -1,4 +1,4 @@
-import "./css.css";
+import "../StartPage/css.css";
 
 export function Start() {
   return (
@@ -47,7 +47,7 @@ export function Start() {
           <div id="f3">*</div>
         </div>
         <div className="button-cont">
-          <button className="next">Далее 🡢</button>
+          <button className="next-but">Далее 🡢</button>
         </div>
       </div>
     </main>

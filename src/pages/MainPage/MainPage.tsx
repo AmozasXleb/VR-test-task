@@ -1,4 +1,4 @@
-import './css.css'
+import '../MainPage/css.css'
 
 export function MainPage() {
   return (
