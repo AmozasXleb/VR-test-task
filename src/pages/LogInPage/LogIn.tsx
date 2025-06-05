@@ -1,5 +1,6 @@
 import { useRef } from "react";
-import "./css.css";
+import styles from "./styles.module.css";
+
 
 export function LogIn() {
   const telDiv = useRef<HTMLDivElement>(null);
@@ -56,9 +57,9 @@ export function LogIn() {
 
   return (
     <main>
-      <div className="content">
-        <div className="main">
-          <div className="header">
+      <div className={styles.content}>
+        <div className={styles.main}>
+          <div className={styles.header}>
             <h1>Авторизация</h1>
             <p>
               Войдите, чтобы управлять своими записями, управлять аккаунтом и
@@ -66,7 +67,7 @@ export function LogIn() {
             </p>
           </div>
 
-          <div className="input-cont">
+          <div className={styles.input_cont}>
             <label>Номер Телефона</label>
             <div ref={telDiv}>
               <img src="../src/assets/ru_flag.svg" alt="Ru" />
@@ -77,6 +78,7 @@ export function LogIn() {
                 onFocus={onFocus}
                 onBlur={onBlur}
                 onChange={telChange}
+                inputMode="numeric"
               />
               <button onClick={clearInput}>
                 <img src="../src/assets/delete_icon.svg" alt="Очистить" />
@@ -85,14 +87,14 @@ export function LogIn() {
           </div>
         </div>
 
-        <div className="button-cont">
+        <div className={styles.button_cont}>
           <p>
             Нажимая “Получить код” вы принимате условия{" "}
             <span>Пользовательского соглашения</span> и{" "}
             <span>Политики кофиденциальности</span> , а также разрешаете
             обработку своих данных
           </p>
-          <button className="next" ref={telBut} disabled={true}>
+          <button className={styles.next} ref={telBut} disabled={true}>
             Получить код
           </button>
         </div>

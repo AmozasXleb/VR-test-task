@@ -1,0 +1,192 @@
+@font-face
+{
+    font-family: SFPR;
+    src: url('../../assets/SF-Pro-Rounded-Regular.otf') format('opentype');
+}
+
+@font-face
+{
+    font-family: SFPRBold;
+    src: url('../../assets/SF-Pro-Rounded-Semibold.otf') format('opentype');
+}
+
+@font-face
+{
+    font-family: SFPRLight;
+    src: url('../../assets/SF-Pro-Rounded-Light.otf') format('opentype');
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+
+}
+
+.content
+{
+        background: #FCFCFC;
+    width: 400px;
+    height: 860px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+        box-shadow: 0px 0px 8px 1px rgba(154, 154, 154, 0.378);
+border-radius: 30px;
+}
+
+.main
+{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.header
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+}
+
+.header h1
+{
+    font-size: 30px;
+    line-height: 39px;
+    letter-spacing: -0.4px;
+    font-family: SFPRBold;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.header p
+{
+font-family: SFPRLight;
+font-weight: 300;
+font-size: 15px;
+line-height: 100%;
+letter-spacing: 0.4px;
+color: #656972;
+margin: 0px;
+}
+
+.inputs_cont
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+    gap: 10px;
+}
+
+.inputs_cont label
+{
+font-family: SFPRLight;
+font-weight: 400;
+font-size: 13px;
+line-height: 100%;
+letter-spacing: 0.4px;
+color: #999EA7;
+}
+
+.inputs_cont div
+{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    padding: 12px 0px;
+font-family: SFPR;
+}
+
+.inputs_cont input
+{
+    width: 30px;
+    height: 55px;
+    border: none;
+    font-size: 26px;
+    border: 1.8px solid #868686;
+    border-radius: 12px;
+    padding-left: 9px;
+    padding-right: 9px;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.inputs_cont input:focus
+{
+    outline: none;
+    border: 1.8px solid #EDCAB8;
+}
+
+.inputs_cont button
+{
+    border: none;
+    background: none;
+    align-items: center;
+    padding: 0px;
+    display: flex;
+}
+
+.button_cont
+{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 16px;
+
+}
+
+.button_cont p
+{
+    font-family: SFPRLight;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: #656972;
+    font-weight: 200;
+}
+
+.button_cont span
+{
+    font-family: SFPR;
+}
+
+.next
+{
+    background: #2d2d2d5c;
+        font-size: 16px;
+    line-height: 21.79px;
+    letter-spacing: 0.22px;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font-family: SFPR;
+    height: 56px;
+    width: 100%;
+    font-weight: 500;
+    border-radius: 16px;
+    border: none;
+}
+
+.back
+{
+    padding-left: 12px;
+    margin-top: 22px;
+}
+
+.back a
+{
+    border: none;
+    background: none;
+    font-family: SFPR;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: black;
+}

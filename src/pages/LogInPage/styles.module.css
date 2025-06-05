@@ -20,6 +20,8 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 98vh;
+
 }
 
 .content
@@ -28,7 +30,10 @@ main{
     width: 400px;
     height: 860px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+        box-shadow: 0px 0px 8px 1px rgba(154, 154, 154, 0.378);
+border-radius: 30px;
 }
 
 .main
@@ -65,7 +70,7 @@ color: #656972;
 margin: 0px;
 }
 
-.input-cont
+.input_cont
 {
     display: flex;
     flex-direction: column;
@@ -73,7 +78,7 @@ margin: 0px;
     gap: 10px;
 }
 
-.input-cont label
+.input_cont label
 {
 font-family: SFPRLight;
 font-weight: 400;
@@ -84,7 +89,7 @@ color: #999EA7;
 margin-left: 5px;
 }
 
-.input-cont div
+.input_cont div
 {
     display: flex;
     flex-direction: row;
@@ -97,21 +102,21 @@ margin-left: 5px;
 font-family: SFPR;
 }
 
-.input-cont input
+.input_cont input
 {
     width: 100%;
     border: none;
     font-size: 16px;
 }
 
-.input-cont input:focus
+.input_cont input:focus
 {
     width: 100%;
     outline: none;
     font-size: 16px;
 }
 
-.input-cont button
+.input_cont button
 {
     border: none;
     background: none;
@@ -120,15 +125,17 @@ font-family: SFPR;
     display: flex;
 }
 
-.button-cont
+.button_cont
 {
     display: flex;
     flex-direction: column;
     gap: 15px;
     text-align: center;
+    padding: 16px;
+
 }
 
-.button-cont p
+.button_cont p
 {
     font-family: SFPRLight;
     font-size: 15px;
@@ -139,7 +146,7 @@ font-family: SFPR;
     font-weight: 200;
 }
 
-.button-cont span
+.button_cont span
 {
     font-family: SFPR;
 }

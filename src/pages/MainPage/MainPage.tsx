@@ -1,4 +1,5 @@
-import '../MainPage/css.css'
+import styles from "./styles.module.css";
+
 
 export function MainPage() {
   return (
