@@ -56,6 +56,22 @@ export function Code() {
     }
   }, [isAllFilled]);
 
+  const [seconds, setSeconds] = useState(60);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setSeconds(prev => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <main>
       <div className={styles.content}>
@@ -68,7 +84,7 @@ export function Code() {
           <div className={styles.header}>
             <h1>Код подтверждения</h1>
             <p>
-              Код отправлен на + 7 922 365 54 06 <br />
+              Код отправлен на + 7 {localStorage.getItem('num')} <br />
               Введите код из SMS
             </p>
           </div>
@@ -88,7 +104,7 @@ export function Code() {
                 />
               ))}
             </div>
-            <label>Запросить повторно через: </label>
+            <label>Запросить повторно через: {seconds}</label>
           </div>
         </div>
 

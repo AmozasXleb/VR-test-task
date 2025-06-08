@@ -1,11 +1,15 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import styles from "./styles.module.css";
-
+import { useNavigate } from "react-router-dom";
 
 export function LogIn() {
+  const navigate = useNavigate();
+
   const telDiv = useRef<HTMLDivElement>(null);
   const telInput = useRef<HTMLInputElement>(null);
   const telBut = useRef<HTMLButtonElement>(null);
+
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   const onFocus = () => {
     if (telDiv.current) {
@@ -41,14 +45,16 @@ export function LogIn() {
 
       telInput.current.value = formatted;
 
-      if (telInput.current.value !== "") {
+      if (telInput.current.value.length === 13) {
         if (telBut.current) {
-          telBut.current.disabled = false;
+          setIsButtonDisabled(false);
+          localStorage.setItem('num', formatted)
           telBut.current.style.background = "#2d2d2d";
         }
       } else {
         if (telBut.current) {
-          telBut.current.disabled = true;
+          setIsButtonDisabled(true);
+
           telBut.current.style.background = "#2d2d2d5c";
         }
       }
@@ -94,7 +100,14 @@ export function LogIn() {
             <span>Политики кофиденциальности</span> , а также разрешаете
             обработку своих данных
           </p>
-          <button className={styles.next} ref={telBut} disabled={true}>
+          <button
+            className={styles.next}
+            ref={telBut}
+            disabled={isButtonDisabled}
+            onClick={() => {
+              navigate("/code");
+            }}
+          >
             Получить код
           </button>
         </div>
