@@ -27,7 +27,7 @@ export function Start() {
         ind1.current.style.transform = "translateX(18px)";
       }
       if (ind2.current) {
-        ind2.current.style.transform = "translateX(-37px)";
+        ind2.current.style.transform = "translateX(-40px)";
       }
 
       if (first.current) {
@@ -44,10 +44,10 @@ export function Start() {
     }
     if (slideNum === 2) {
       if (ind1.current) {
-        ind1.current.style.transform = "translateX(27px)";
+        ind1.current.style.transform = "translateX(28px)";
       }
       if (ind3.current) {
-        ind3.current.style.transform = "translateX(-38px)";
+        ind3.current.style.transform = "translateX(-40px)";
       }
 
       if (second.current) {
