@@ -60,7 +60,7 @@ export function Code() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setSeconds(prev => {
+      setSeconds((prev) => {
         if (prev <= 1) {
           clearInterval(timer);
           return 0;
@@ -75,6 +75,10 @@ export function Code() {
   return (
     <main>
       <div className={styles.content}>
+        {/* <div className={styles.loading}>
+          <img src="../src/assets/dowland_img.png" alt="Загрузка..." />
+        </div> */}
+
         <div className={styles.main}>
           <div className={styles.back}>
             <a href="/login">
@@ -84,7 +88,7 @@ export function Code() {
           <div className={styles.header}>
             <h1>Код подтверждения</h1>
             <p>
-              Код отправлен на + 7 {localStorage.getItem('num')} <br />
+              Код отправлен на + 7 {localStorage.getItem("num")} <br />
               Введите код из SMS
             </p>
           </div>

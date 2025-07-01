@@ -24,6 +24,36 @@ main{
 
 }
 
+.loading
+{
+    position: absolute;
+        width: 400px;
+    height: 860px;
+    background: #00000042;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    opacity: 0;
+    display: flex;
+}
+
+.loading img
+{
+  animation: 1s linear infinite rotate;
+  opacity: 1;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
 .content
 {
         background: #FCFCFC;

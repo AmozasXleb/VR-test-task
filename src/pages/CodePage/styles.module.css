@@ -36,6 +36,18 @@ main{
 border-radius: 30px;
 }
 
+.loading
+{
+    position: absolute;
+        width: 400px;
+    height: 860px;
+    background: #00000042;
+    border-radius: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
 .main
 {
     display: flex;

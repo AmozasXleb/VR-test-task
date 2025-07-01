@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 export function Start() {
   const navigate = useNavigate();
 
-
   const ind1 = useRef<HTMLDivElement>(null);
   const ind2 = useRef<HTMLDivElement>(null);
   const ind3 = useRef<HTMLDivElement>(null);
@@ -62,8 +61,8 @@ export function Start() {
 
       return;
     }
-        if (slideNum === 3) {
-          navigate("/login")
+    if (slideNum === 3) {
+      navigate("/login");
     }
   };
 
@@ -84,6 +83,12 @@ export function Start() {
       }
       if (firstText.current) {
         firstText.current.style.opacity = "1";
+      }
+      if (second.current) {
+        second.current.style.opacity = "0";
+      }
+      if (last.current) {
+        last.current.style.opacity = "0";
       }
     }, 1000);
   }, []);

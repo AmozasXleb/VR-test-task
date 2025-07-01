@@ -1,9 +1,14 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./styles.module.css";
 import { useNavigate } from "react-router-dom";
 
 export function LogIn() {
   const navigate = useNavigate();
+
+  const loadingDiv = useRef<HTMLDivElement>(null);
+  const loadingImg = useRef<HTMLImageElement>(null);
+
+  const [load, setLoad] = useState(false);
 
   const telDiv = useRef<HTMLDivElement>(null);
   const telInput = useRef<HTMLInputElement>(null);
@@ -48,7 +53,7 @@ export function LogIn() {
       if (telInput.current.value.length === 13) {
         if (telBut.current) {
           setIsButtonDisabled(false);
-          localStorage.setItem('num', formatted)
+          localStorage.setItem("num", formatted);
           telBut.current.style.background = "#2d2d2d";
         }
       } else {
@@ -61,9 +66,40 @@ export function LogIn() {
     }
   };
 
+  const navNext = () => {
+    setLoad(true);
+
+    setTimeout(() => {
+      if (loadingDiv.current) {
+        loadingDiv.current.style.opacity = "1";
+        setTimeout(() => {
+          if (loadingDiv.current) {
+            loadingDiv.current.style.background = "white";
+            if (loadingImg.current) {
+              loadingImg.current.style.opacity = "0";
+              setTimeout(() => {
+                navigate("/code");
+              }, 300);
+            }
+          }
+        }, 1600);
+      }
+    }, 200);
+  };
+
   return (
     <main>
       <div className={styles.content}>
+        {load && (
+          <div className={styles.loading} ref={loadingDiv}>
+            <img
+              src="../src/assets/dowland_img.png"
+              alt="Загрузка..."
+              ref={loadingImg}
+            />
+          </div>
+        )}
+
         <div className={styles.main}>
           <div className={styles.header}>
             <h1>Авторизация</h1>
@@ -105,7 +141,7 @@ export function LogIn() {
             ref={telBut}
             disabled={isButtonDisabled}
             onClick={() => {
-              navigate("/code");
+              navNext();
             }}
           >
             Получить код

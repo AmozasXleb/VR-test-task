@@ -28,17 +28,17 @@ main{
     flex-direction: column;
     box-shadow: 0px 0px 8px 1px rgba(154, 154, 154, 0.378);
 border-radius: 30px;
-justify-content: end;
 }
 
 .frame_row
 {
     overflow: hidden;
+    height: 2190px;
 }
 
 .frame
 {
-    height: 730px;
+    min-height: 730px;
     justify-content: end;
     display: flex;
     flex-direction: column;
