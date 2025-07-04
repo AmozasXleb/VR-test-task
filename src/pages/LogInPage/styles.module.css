@@ -21,13 +21,17 @@ main{
     justify-content: center;
     align-items: center;
     height: 98vh;
+}
 
+.main div
+{
+  animation: 0.5s appearing;
 }
 
 .loading
 {
     position: absolute;
-        width: 400px;
+    width: 400px;
     height: 860px;
     background: #00000042;
     border-radius: 30px;
@@ -51,6 +55,18 @@ main{
 
   to {
     transform: rotate(-360deg);
+  }
+}
+
+
+
+@keyframes appearing {
+  from {
+  opacity: 0;
+  }
+
+  to {
+  opacity: 1;
   }
 }
 
@@ -162,6 +178,7 @@ font-family: SFPR;
     gap: 15px;
     text-align: center;
     padding: 16px;
+  animation: 0.5s appearing;
 
 }
 

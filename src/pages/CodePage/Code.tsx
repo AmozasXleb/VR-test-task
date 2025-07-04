@@ -75,9 +75,6 @@ export function Code() {
   return (
     <main>
       <div className={styles.content}>
-        {/* <div className={styles.loading}>
-          <img src="../src/assets/dowland_img.png" alt="Загрузка..." />
-        </div> */}
 
         <div className={styles.main}>
           <div className={styles.back}>
